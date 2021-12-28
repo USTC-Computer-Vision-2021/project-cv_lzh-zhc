@@ -4,9 +4,10 @@
 
 成员及分工
 
-+ 林哲晖 PB180104??
++ 林哲晖 PB18010490
+  + 算法调研 + coding
 + 张汉昌 PB18010480
-  + 二人同等参与,按实际需要随机完成
+  + coding + 实验报告撰写
 
 
 
@@ -78,15 +79,49 @@ x = A \ b;
 
 
 
-为了取得更好的效果,可以使用混合梯度,我们也有实现.混合梯度即一个更好的梯度场.
+为了取得更好的效果,可以使用混合梯度,我们也有实现.混合梯度即一个更好的梯度场,但由于计算速度更慢,所以不作采用。
 
 
 
 ### 效果展示
 
+图片主要来源于 https://www.demilked.com/then-and-now-world-changes-rephotos/
+
+能看出此算法的效果是很好的，基本实现了无缝贴合，但缺点是两张图片融合的位置不一定匹配，需要手动改变目标区域的位置得到较好的结果，此算法也许能使用SIFT等特征点匹配算法优化。
+
+<table>
+    <tr>
+        <td ><center><img src="./result/result1.jpg" >Figure 1</center></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td ><center><img src="./result/result2.jpg" >Figure 2</center></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td ><center><img src="./result/result3.jpg" >Figure 3</center></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td ><center><img src="./result/result4.jpg" >Figure 4</center></td>
+    </tr>
+</table>
 
 
 
+除此之外，此算法还能实现其他功能，比如“换头”
+
+<table>
+    <tr>
+        <td ><center><img src="./result/result99.jpg" >Figure 5</center></td>
+    </tr>
+</table>
 
 ### 工程结构
 
@@ -109,3 +144,20 @@ x = A \ b;
 
 
 MATLAB中执行`poisson_editing.m`即可.
+
+在该代码文件的前两行
+
+```matlab
+im1 = imread('../data/set1/new.jpg');
+im2 = imread('../data/set1/old.jpg');
+```
+
+分别把"set1"改为"set2","set3","set4","set99"，可用其他几组图片测试
+
+运行后点击红色按钮绘制多边形区域，点击蓝色按钮计算结果，拖动多边形可以实时计算拖动后的结果。
+
+<table>
+    <tr>
+        <td ><center><img src="./result/sample.gif" >Drag Sample</center></td>
+    </tr>
+</table>
