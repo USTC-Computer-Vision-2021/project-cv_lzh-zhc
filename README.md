@@ -108,4 +108,4 @@ x = A \ b;
 
 
 
-MATLAB中执行``poisson_editing.m`即可.
+MATLAB中执行`poisson_editing.m`即可.
