@@ -21,7 +21,7 @@
 
 + 本质上是一个**图像融合**问题.图像融合问题有多种算法,经典且效果好的**泊松融合**将问题归结为解泊松方程,即**求偏微分方程数值解**.我们实现如下paper的算法:
 
-​	*Pérez, Patrick, et al. ‘Poisson Image Editing’. ACM SIGGRAPH 2003 Papers on - SIGGRAPH ’03, ACM Press, 2003, p. 313.*
+​	[*Pérez, Patrick, et al. ‘Poisson Image Editing’. ACM SIGGRAPH 2003 Papers on - SIGGRAPH ’03, ACM Press, 2003, p. 313.*](https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf)
 
 
 
